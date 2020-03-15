@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="">
+<html lang="pt-br" ng-app>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,57 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{"Olá Mundo"}}</h1>
+        <!-- <h1>{{"Olá Mundo"}}</h1> -->
+        <!-- <h1>Filtros :: Filters</h1>
+        <h4>Em Angularjs</h4>
+        <hr>
+        <p>
+            Filtro de Texto: {{ "Lucas" }}
+            <br>
+            Filtro de Texto: {{ "Lucas" | uppercase}}
+            <br>
+            Filtro de Texto: {{ "Lucas" | lowercase}}
+            <br>
+            Filtro de Moeda: {{ 250 | currency}}
+            <br>
+            Filtro de Moeda: {{ 250 | currency: 'R$ '}}
+            <br>
+            Filtro de Moeda: {{ 250 | currency: ''}}
+            <br>
+            Filtro de Número: {{ 1350000 | number}}
+        </p>    -->
+
+        <h1>Ng-Module</h1>
+        <p>
+            Seu Nome: {{MeuNome || uppercase}}
+            <br>
+            <input type="text" ng-model="MeuNome" class="form-control" placeholder="Digite seu Nome">
+        </p>
+        <p>
+            Opção Selecionada: {{pais || uppercase}}
+            <br>
+            <select class="form-control" ng-model="pais">
+                <option value="1">Brasil</option>
+                <option value="2">Colombia</option>
+                <option value="3">Uruguay</option>
+                <option value="4">Paraguay</option>
+                <option value="5">Bolivia</option>
+            </select>
+        </p>
+        <p>
+            Selecionados: {{opt1}} -- {{opt2}}
+            <br>
+            <input type="checkbox" ng-model="opt1">Opção 1
+            <br>
+            <input type="checkbox" ng-model="opt2">Opção 2
+        </p>
+        <p>
+            Genero Selecionado: {{genero}} 
+            <br>
+            <input type="radio" value="m" ng-model="genero"> Masculino
+            <br>
+            <input type="radio" value="f" ng-model="genero">Feminino
+        </p>
     </div>
 </body>
 </html>
