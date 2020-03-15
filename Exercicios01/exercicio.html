@@ -20,8 +20,8 @@
         <label for="salario">Salário em Dólares: </label>
         <input class="form-control" type="text" id="salario" ng-model="salario">
         <hr>
-        <p>Nome: {{nome}} </p>
-        <p>Lugar de Trabalho: {{trabalho}} </p>
+        <p>Nome: {{nome | uppercase}} </p>
+        <p>Lugar de Trabalho: {{trabalho | lowercase}} </p>
         <p>Salário: {{salario | currency}} </p>
     </div>
 </body>
